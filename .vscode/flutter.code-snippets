@@ -1,0 +1,293 @@
+{
+  "Stateless Screen": {
+    "prefix": "screenStless",
+    "body": [
+      "import 'package:flutter/material.dart';",
+      "",
+      "class ${1:MyPage} extends StatelessWidget {",
+      "  const ${1:MyPage}({super.key});",
+      "",
+      "  @override",
+      "  Widget build(BuildContext context) {",
+      "    return Scaffold(",
+      "      appBar: AppBar(",
+      "        title: const Text('${1:MyPage}'),",
+      "      ),",
+      "      body: const Center(",
+      "        child: Text('${1:MyPage} Screen'),",
+      "      ),",
+      "    );",
+      "  }",
+      "}"
+    ],
+    "description": "Create a basic StatelessWidget screen with Scaffold"
+  },
+  "Stateful Screen": {
+    "prefix": "screenStful",
+    "body": [
+      "import 'package:flutter/material.dart';",
+      "",
+      "class ${1:MyPage} extends StatefulWidget {",
+      "  const ${1:MyPage}({super.key});",
+      "",
+      "  @override",
+      "  State<${1:MyPage}> createState() => _${1:MyPage}State();",
+      "}",
+      "",
+      "class _${1:MyPage}State extends State<${1:MyPage}> {",
+      "  @override",
+      "  Widget build(BuildContext context) {",
+      "    return Scaffold(",
+      "      appBar: AppBar(",
+      "        title: const Text('${1:MyPage}'),",
+      "      ),",
+      "      body: const Center(",
+      "        child: Text('${1:MyPage} Screen'),",
+      "      ),",
+      "    );",
+      "  }",
+      "}"
+    ],
+    "description": "Create a basic StatefulWidget screen with Scaffold"
+  },
+  "Stateless Widget": {
+    "prefix": "widgetStless",
+    "body": [
+      "import 'package:flutter/material.dart';",
+      "",
+      "class ${1:MyWidget} extends StatelessWidget {",
+      "  const ${1:MyWidget}({super.key});",
+      "",
+      "  @override",
+      "  Widget build(BuildContext context) {",
+      "    return ${2:const SizedBox.shrink()};",
+      "  }",
+      "}"
+    ],
+    "description": "Create a reusable StatelessWidget"
+  },
+  "Stateful Widget": {
+    "prefix": "widgetStful",
+    "body": [
+      "import 'package:flutter/material.dart';",
+      "",
+      "class ${1:MyWidget} extends StatefulWidget {",
+      "  const ${1:MyWidget}({super.key});",
+      "",
+      "  @override",
+      "  State<${1:MyWidget}> createState() => _${1:MyWidget}State();",
+      "}",
+      "",
+      "class _${1:MyWidget}State extends State<${1:MyWidget}> {",
+      "  @override",
+      "  Widget build(BuildContext context) {",
+      "    return ${2:const SizedBox.shrink()};",
+      "  }",
+      "}"
+    ],
+    "description": "Create a reusable StatefulWidget"
+  },
+  "GoRouter Route": {
+    "prefix": "goRoute",
+    "body": [
+      "GoRoute(",
+      "  path: '${1:/path}',",
+      "  builder: (context, state) => const ${2:MyPage}(),",
+      "),"
+    ],
+    "description": "Create a GoRoute entry"
+  },
+  "GoRouter Route With Name": {
+    "prefix": "goRouteName",
+    "body": [
+      "GoRoute(",
+      "  path: '${1:/path}',",
+      "  name: '${2:routeName}',",
+      "  builder: (context, state) => const ${3:MyPage}(),",
+      "),"
+    ],
+    "description": "Create a named GoRoute entry"
+  },
+  "Navigate With context.go": {
+    "prefix": "goPath",
+    "body": [
+      "context.go('${1:/profile}');"
+    ],
+    "description": "Navigate using go_router context.go"
+  },
+  "Push With context.push": {
+    "prefix": "pushPath",
+    "body": [
+      "context.push('${1:/details}');"
+    ],
+    "description": "Navigate using go_router context.push"
+  },
+  "Pop Route": {
+    "prefix": "popRoute",
+    "body": [
+      "context.pop();"
+    ],
+    "description": "Pop the current route with go_router"
+  },
+  "Elevated Button": {
+    "prefix": "btnElevated",
+    "body": [
+      "ElevatedButton(",
+      "  onPressed: () {",
+      "    ${1:// action}",
+      "  },",
+      "  child: const Text('${2:Continue}'),",
+      ")"
+    ],
+    "description": "Create an ElevatedButton"
+  },
+  "Text Button": {
+    "prefix": "btnText",
+    "body": [
+      "TextButton(",
+      "  onPressed: () {",
+      "    ${1:// action}",
+      "  },",
+      "  child: const Text('${2:Cancel}'),",
+      ")"
+    ],
+    "description": "Create a TextButton"
+  },
+  "Outlined Button": {
+    "prefix": "btnOutlined",
+    "body": [
+      "OutlinedButton(",
+      "  onPressed: () {",
+      "    ${1:// action}",
+      "  },",
+      "  child: const Text('${2:Learn more}'),",
+      ")"
+    ],
+    "description": "Create an OutlinedButton"
+  },
+  "TextFormField": {
+    "prefix": "txtField",
+    "body": [
+      "TextFormField(",
+      "  controller: ${1:controller},",
+      "  decoration: const InputDecoration(",
+      "    labelText: '${2:Label}',",
+      "    border: OutlineInputBorder(),",
+      "  ),",
+      ")"
+    ],
+    "description": "Create a styled TextFormField"
+  },
+  "TextEditingController": {
+    "prefix": "txtController",
+    "body": [
+      "final TextEditingController ${1:controller} = TextEditingController();"
+    ],
+    "description": "Create a TextEditingController"
+  },
+  "Dispose Controller": {
+    "prefix": "disposeCtrl",
+    "body": [
+      "@override",
+      "void dispose() {",
+      "  ${1:controller}.dispose();",
+      "  super.dispose();",
+      "}"
+    ],
+    "description": "Dispose a controller in a StatefulWidget"
+  },
+  "Set State": {
+    "prefix": "setStateNow",
+    "body": [
+      "setState(() {",
+      "  ${1:// update state}",
+      "});"
+    ],
+    "description": "Wrap changes in setState"
+  },
+  "FutureBuilder": {
+    "prefix": "futureBuilder",
+    "body": [
+      "FutureBuilder<${1:List<String]}>(",
+      "  future: ${2:future},",
+      "  builder: (context, snapshot) {",
+      "    if (snapshot.connectionState == ConnectionState.waiting) {",
+      "      return const Center(child: CircularProgressIndicator());",
+      "    }",
+      "",
+      "    if (snapshot.hasError) {",
+      "      return Center(child: Text('Error: ${3:Unable to load data}'));",
+      "    }",
+      "",
+      "    final data = snapshot.data;",
+      "    return ${4:Text(data.toString())};",
+      "  },",
+      ")"
+    ],
+    "description": "Create a FutureBuilder with loading and error states"
+  },
+  "ListView Builder": {
+    "prefix": "listBuilder",
+    "body": [
+      "ListView.builder(",
+      "  itemCount: ${1:items.length},",
+      "  itemBuilder: (context, index) {",
+      "    final item = ${2:items[index]};",
+      "    return ListTile(",
+      "      title: Text(item.toString()),",
+      "    );",
+      "  },",
+      ")"
+    ],
+    "description": "Create a ListView.builder"
+  },
+  "SafeArea Scaffold Body": {
+    "prefix": "safeBody",
+    "body": [
+      "SafeArea(",
+      "  child: Padding(",
+      "    padding: const EdgeInsets.all(16),",
+      "    child: ${1:child},",
+      "  ),",
+      ")"
+    ],
+    "description": "Wrap content with SafeArea and padding"
+  },
+  "Column Centered": {
+    "prefix": "colCenter",
+    "body": [
+      "Column(",
+      "  mainAxisAlignment: MainAxisAlignment.center,",
+      "  crossAxisAlignment: CrossAxisAlignment.center,",
+      "  children: [",
+      "    ${1:// children}",
+      "  ],",
+      ")"
+    ],
+    "description": "Create a centered Column"
+  },
+  "Padding All": {
+    "prefix": "padAll",
+    "body": [
+      "Padding(",
+      "  padding: const EdgeInsets.all(${1:16}),",
+      "  child: ${2:child},",
+      ")"
+    ],
+    "description": "Wrap a widget with uniform padding"
+  },
+  "SizedBox Height": {
+    "prefix": "gapH",
+    "body": [
+      "const SizedBox(height: ${1:16}),"
+    ],
+    "description": "Insert vertical spacing"
+  },
+  "SizedBox Width": {
+    "prefix": "gapW",
+    "body": [
+      "const SizedBox(width: ${1:16}),"
+    ],
+    "description": "Insert horizontal spacing"
+  }
+}

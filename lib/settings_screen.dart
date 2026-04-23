@@ -1,23 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({super.key});
+class SettingsScreen extends StatelessWidget {
+  const SettingsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('ProfileScreen')),
+      appBar: AppBar(title: const Text('SettingsScreen')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('ProfileScreen Screen'),
+            Text('SettingsScreen Screen'),
             ElevatedButton(
               onPressed: () {
-                context.replace('/settings');
+                context.go('/profile');
               },
-              child: Text('Settings'),
+              child: Text('Profile'),
             ),
             ElevatedButton(
               onPressed: () {

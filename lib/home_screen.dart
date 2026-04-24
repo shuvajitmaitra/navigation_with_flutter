@@ -21,6 +21,18 @@ class HomeScreen extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
+                context.push('/payment');
+              },
+              child: Text('Payment'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                context.push('/checkout');
+              },
+              child: Text('Checkout'),
+            ),
+            ElevatedButton(
+              onPressed: () {
                 context.push(
                   Uri(
                     path: '/productDetails',

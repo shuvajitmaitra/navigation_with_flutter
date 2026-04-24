@@ -1,15 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:navigation_with_flutter/routes.dart';
+import 'router/app_router.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const App());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class App extends StatelessWidget {
+  const App({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(routerConfig: routes);
+    return MaterialApp.router(
+      title: 'Navigation Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
+        useMaterial3: true,
+      ),
+      routerConfig: appRouter,
+    );
   }
 }
